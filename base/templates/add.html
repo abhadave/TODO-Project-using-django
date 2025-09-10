@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="form-container">
+    <h2 class="form-title">Create Operation</h2>
+    <h3 class="form-subtitle">Add Task</h3>
+
+    <form action="" method="POST" class="task-form">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" value="{{ task.title }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="desc">Description</label>
+            <input type="text" name="desc" id="desc" value="{{ task.desc }}" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">Add Task</button>
+    </form>
+</div>
+{% endblock content %}

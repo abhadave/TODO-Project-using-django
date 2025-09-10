@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<center>
+    <h3 style="font-family: cursive; margin-top: 30px;">Are you sure you want to delete the task?</h3>
+    <h3 style="font-family: cursive;">TASK: {{task.title}}</h3>
+    <a href="{% url 'delete_' task.id %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'home' %}" class="btn btn-primary">Cancel</a>
+
+</center>
+{% endblock content %}

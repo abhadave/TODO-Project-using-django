@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+{% block content %}
+
+<div class="reset-container">
+    <h2>Reset Password</h2>
+
+    
+    {% if old_pass_notmatched %}
+
+          <h2>entered wrong old passpword !!! please try again</h2>
+
+    {% endif %}
+    
+    {% if  confirm_notmatched %}
+
+          <h2>entered new password is not matching !!! please try again</h2>
+
+    {% endif %}
+
+    <form action=""  method="POST">
+      {% csrf_token %}
+
+        {% if old_pass_matched %}
+         
+          <label for="">Enter New Password</label>
+          <input type="password" name="newpassword"> <br>
+          
+          <label for="">confirm New Password</label>
+          <input type="password" name="confirmpassword"> <br>
+
+        {% else %}
+        
+          <label for="">Enter old Password</label>
+          <input type="password" name="oldpassword"> <br>
+
+        {% endif %}
+
+      <input type="submit" value="reset" class="btn btn-success">
+    </form>
+</div>
+
+{% endblock content %}

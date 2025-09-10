@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="login-container">
+    <h2>Login Here</h2>
+    {% if wrong_credentials %}
+        <h3>Enter the right credentials!</h3>
+    {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label>Username</label>
+        <input type="text" name="username">
+
+        <label>Password</label>
+        <input type="password" name="password">
+
+        <input type="submit" value="Login" >
+    </form>
+
+    <h4>Your account is not there? <a href="{% url 'register' %}">Register</a></h4>
+</div>
+{% endblock content %}
