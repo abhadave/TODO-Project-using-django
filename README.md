@@ -23,7 +23,7 @@ This app allows users to **add, update, delete, and mark tasks as completed ,inc
 <img width="579" height="878" alt="image" src="https://github.com/user-attachments/assets/fdd07367-fd8f-4e01-9d4c-ef276c01686a" />
 
 ### Home Page
-![Home Page](<img width="1920" height="868" alt="image" src="https://github.com/user-attachments/assets/4cc529ab-5ac5-4b76-92ee-228a6cdf9733" />)
+![Home Page]<img width="1920" height="868" alt="image" src="https://github.com/user-attachments/assets/4cc529ab-5ac5-4b76-92ee-228a6cdf9733" />
 
 ## 🛠️ Tech Stack
 - **Backend**: Django (Python)
